@@ -1,7 +1,7 @@
 export function TwitterFollowCard({
 	formatUserName,
 	userName,
-	name,
+	children,
 	isFollowing,
 }) {
 	const imageSrc = `https://unavatar.io/${userName}`;
@@ -13,7 +13,7 @@ export function TwitterFollowCard({
 			<header className="tw-followCard-header">
 				<img className="tw-followCard-avatar" src={imageSrc}></img>
 				<div className="tw-followCard-info">
-					<strong>{name}</strong>
+					<strong>{children}</strong>
 					<span className="tw-followCard-infoUserName">
 						{formatUserName(userName)}
 					</span>

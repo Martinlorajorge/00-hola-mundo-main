@@ -9,20 +9,23 @@ export function App() {
 				formatUserName={format}
 				isFollowing={false}
 				userName="MartinLoraJorge"
-				name="SoyTinchoAaron"
-			/>
+			>
+				SoyTinchoAaron
+			</TwitterFollowCard>
 			<TwitterFollowCard
 				formatUserName={format}
 				isFollowing
 				userName="PascualSilvestri"
-				name="PascualSilvestri123"
-			/>
+			>
+				PascualSilvestri123
+			</TwitterFollowCard>
 			<TwitterFollowCard
 				formatUserName={format}
 				isFollowing
 				userName="KaterinneAmaya"
-				name="KaterinneAmaya"
-			/>
+			>
+				KaterinneAmaya
+			</TwitterFollowCard>
 		</section>
 	);
 }

@@ -1,11 +1,29 @@
+import { useState } from "react";
+
 export function TwitterFollowCard({
 	formatUserName,
-	userName,
+	userName = `Unknown`,
 	children,
-	isFollowing,
 }) {
+	const [isFollowing, setIsFollowing] = useState(false);
+	//esta linea de arriba es lo mismo que las 3 lineas de abajo
+	//const state = useState(false);
+	//const isFollowing = state[0];
+	//const setIsFollowing = state[1];
+
 	const imageSrc = `https://unavatar.io/${userName}`;
 	console.log(isFollowing);
+
+	const text = isFollowing ? "Siguiendo" : "Seguir";
+
+	const buttonClassName = isFollowing
+		? "tw-followCard-button is-following"
+		: "tw-followCard-button";
+
+	const handleClick = () => {
+		setIsFollowing(!isFollowing);
+	};
+
 	return (
 		<article
 			className="tw-followCard" /*style={{ display: "flex", alignItems: "center", color: "#fff" }}*/
@@ -21,7 +39,9 @@ export function TwitterFollowCard({
 			</header>
 
 			<aside>
-				<button className="tw-followCard-button">Seguir</button>
+				<button className={buttonClassName} onClick={handleClick}>
+					{text}
+				</button>
 			</aside>
 		</article>
 	);

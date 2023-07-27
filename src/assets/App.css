@@ -31,6 +31,7 @@
 }
 
 .tw-followCard-button {
+	cursor: pointer;
 	margin-left: 16px;
 	border: 0;
 	border-radius: 999px;
@@ -40,4 +41,25 @@
 	-o-border-radius: 999px;
 	padding: 6px 16px;
 	font-weight: bold;
+	border: 1px solid #000;
+	transition: 0.3s ease background-color;
+	-webkit-transition: 0.3s ease background-color;
+	-moz-transition: 0.3s ease background-color;
+	-ms-transition: 0.3s ease background-color;
+	-o-transition: 0.3s ease background-color;
+}
+
+.tw-followCard-button.is-following {
+	border: 1px solid red;
+	background: salmon;
+	color: #fff;
+}
+
+.tw-followCard-button:hover {
+	background-color: #09f;
+	color: #fff;
+}
+
+.tw-followCard-button.is-following:hover {
+	background: red;
 }

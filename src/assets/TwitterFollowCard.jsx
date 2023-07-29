@@ -21,6 +21,7 @@ export function TwitterFollowCard({
 		: "tw-followCard-button";
 
 	const handleClick = () => {
+		//si el valor que tenia era false ahora es true, y viceversa
 		setIsFollowing(!isFollowing);
 	};
 
